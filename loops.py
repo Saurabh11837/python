@@ -86,20 +86,25 @@ b="Nature"
 
 
 # Using break keyword
-print("Using break keyword...")
-for i in range(1,10):
-    if i==5:
-        break
-    else:
-        print(i)
+# print("Using break keyword...")
+# for i in range(1,10):
+#     if i==5:
+#         print("Break statement uses so this now loops is stop")
+#         break
+#     else:
+#         print(i)
 # using contine keyword
-print("Using Continue keyword...")
+# print("Using Continue keyword...")
+# for i in range(1,10):
+#     if i==5:
+#         print("Here using 'Continue' keyword so i step is skip..")
+#         continue
+#     else:
+#         print(i)
 for i in range(1,10):
     if i==5:
-        continue
-    else:
-        print(i)
-for i in range(1,10):
-    if i==5:
-        continue
+        print("Here using 'Break' keyword so i step is skip..")
+        break
     print(i)
+else:
+    print("Break stateement is not executed");
