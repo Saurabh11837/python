@@ -23,7 +23,7 @@
 # Types of Arugments pass in the function
 # Now there are 3 types of arugment that we can pass to parameters. positional arugment, default arugment, keyword arugment, For understandd the we will first see examples.
 # ========== Type 1(passing arugment in funciton) ===========
-# sum(5,6)
+# add(5,6)
 # def add(a, b):
 #     return a + b
 
