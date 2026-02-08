@@ -9,7 +9,9 @@
 # First we have to know what is the syntax of list and how, to create a list we have to use squrare brackets([]).
 # Example : fruits = ["apple","banana","cherry"]
 #           numbers =[10, 20, 30, 40]
-# a=[12,13,14, 15.5, True, print("Saurav"), "raj"]
+
+# This is the example of Hetrogenous list
+# a=[12,13,14, 15.5, True, print("Saurav"), "raj"]  
 
 # 1st way to accessing list value using index
 # for i in range(0,len(a),1):  
@@ -78,8 +80,8 @@
 # my_list=[1,3,4,6]
 # print(my_list)
 
-# # Insert 2 at index of 1.
-# my_list.insert(1,2)
+# # Insert 4 at index of 1 (index start form 0 so second index stroing data usin 1).
+# my_list.insert(1,4)
 # my_list.insert(5,5)
 # # Output the the list after inserting the element
 # print(my_list)
@@ -102,6 +104,13 @@
 # 1. Using Slicing
 # 2. Using a Loop
 # 3. Using extend() method, if data adding at the end.
+
+# Slicing Syntax
+# sequence[start:stop:step]
+# start: The index where slicing begins (inclusive). Defaults to 0.
+# stop: The index where slicing ends (exclusive); it stops just before this position.
+# step: (Optional) The interval between indices. Defaults to 1
+
 
 # print("Insert multipal data using slicing method")
 # one_list=[1,5,8]
@@ -239,7 +248,7 @@
 # print(f"Original list : {list_Data}")
 
 # # Sort the list
-# sorted_list =sorted(list_Data)
+# sorted_list = sorted(list_Data)
 
 # second_smallest = sorted_list[1]
 # second_greatest = sorted_list[-2]
