@@ -32,7 +32,7 @@
 # b=hash((1,2,3,4))
 # print(b)  #iska hash value change nahi hoga everry run pe same hi rahega.
 
-# store in tupe hetrogenous type data, and show the output of tuple.
+# store in tuple hetrogenous type data, and show the output of tuple.
 # print(hash((1,2,"abc",3,4)))
 # print(hash((1,2,"abc",3,4)))
 
@@ -61,7 +61,7 @@
 # ****************************************************************************************************
 # Set Traversing 
 # 1. A set cannot be traversed using the index values cause it is unordered and has no index.
-# 2. So many times it will give random values. you can watch the video for complete understanding.
+# 2. So many times it will give random values. 
 
 # Set methods
 # 1. Now set methods are very powerful cause you don't have any indexing you cannot change the values but set is mutuble so we use methods for this.
@@ -123,13 +123,13 @@
 
 # this compund using in the math section
 
-a = {1,2,3,4,5}
-b = {4,5,6,7,8}
-print(a)
-print(b)
-a |= b  #a union b Outpue: {1,2,3,4,5,6,7,8}
+# a = {1,2,3,4,5}
+# b = {4,5,6,7,8}
+# print(a)
+# print(b)
+# a |= b  #a union b Outpue: {1,2,3,4,5,6,7,8}
 
-print(a) 
+# print(a) 
 
  
 

@@ -14,7 +14,7 @@
 # print(student["age"])  #Output:25
 # print(student)  #Output: {'name': 'Saurabh', 'age': 25}
 
-# # Again telling weww can perform CRUD(create, read update, delete) operations on values but not all on keys cause the keys cannot be changed after creation. 
+# # Again telling we can perform CRUD(create, read update, delete) operations on values but not all on keys cause the keys cannot be changed after creation. 
 
 # # Mutable chek
 # student["name"]="Saurabh Patel"
@@ -113,7 +113,7 @@
 
 # print(sum)
 # 3. Count the frequency of each elements in list.
-# a=[1,1,1,1,2,2,2,3,4,5,6,6,6,5,1,5,5,1,6,2,1,4,3,5,9,1]
+a=[1,1,1,1,2,2,2,3,4,5,6,6,6,5,1,5,5,1,6,2,1,4,3,5,9,1]
 
 # Simple way
 # count=0
@@ -135,14 +135,14 @@
 # print(d)
 
 # 4. Write a Pythonn program to combine two dictionary by adding value for common keys.
-d1={1:10, 2:20, 3:30, 4:40, 5:50, 6:60}
-d2={6:60, 7:70, 8:80, 9:90, 10:100}
+# d1={1:10, 2:20, 3:30, 4:40, 5:50, 6:60}
+# d2={6:60, 7:70, 8:80, 9:90, 10:100}
 
-for i in d2:
-    if i in d1.keys():
-        d1[i] += d2[i]   #update, and create method apply on d1
-    else:
-        d1[i] = d2[i]
+# for i in d2:
+#     if i in d1.keys():
+#         d1[i] += d2[i]   #update, and create method apply on d1
+#     else:
+#         d1[i] = d2[i]
 
-print(d1)
+# print(d1)
 

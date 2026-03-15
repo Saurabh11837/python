@@ -11,11 +11,12 @@
 #           numbers =[10, 20, 30, 40]
 
 # This is the example of Hetrogenous list
-# a=[12,13,14, 15.5, True, print("Saurav"), "raj"]  
+a=[12,13,14, 15.5, True, print("Sauravvvv"), "raj"]  
 
 # 1st way to accessing list value using index
 # for i in range(0,len(a),1):  
 #     print(a[i])
+
 
 # 2nd way directly on values
 # for i in a:
@@ -283,14 +284,14 @@
 # print(f"The smallest number is : {smallest} \nsecond smallest number is : {second_smallest}")
 
 # 5.Check if list is shorted or not
-first_list = [1, 2, 3, 4, 5]
-second_list = [1, 5, 4, 2, 3]
+# first_list = [1, 2, 3, 4, 5]
+# second_list = [1, 5, 4, 2, 3]
 
-if first_list == sorted(first_list):
-    print("First list is sorted in ascending order.")
-else:
-    print("First list is not sorted")
-if second_list == sorted(second_list):
-    print("Second list is sorted in ascending order.")
-else:
-    print("Second list is not sorted")
+# if first_list == sorted(first_list):
+#     print("First list is sorted in ascending order.")
+# else:
+#     print("First list is not sorted")
+# if second_list == sorted(second_list):
+#     print("Second list is sorted in ascending order.")
+# else:
+#     print("Second list is not sorted")
