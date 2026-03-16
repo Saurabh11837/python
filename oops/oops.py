@@ -90,7 +90,8 @@
 
 
 # How many creating an object of a class is possible?
-# --> We can create as many objects of a class as we want. Each object will have its own unique state and behavior, but they will all share the same attributes and methods defined in the class. For example:
+# --> We can create as many objects of a class as we want. Each object will have its own unique state and behavior, but they will all share the same attributes and methods defined in the class. 
+# For example:
 # class Person:
 #     species = "Human"
 
@@ -152,24 +153,52 @@
 
 # ----- Type of Methods -------
 # 1. Instance Method :- An instance method Works with instance (object) of the class. This method can access an modify instance attributes.
+# --- or ----> Ye object ke data par kaam karta hai. Iska first parameter self hota hai.
 # # Example:
-# class MyClass1:
-#     def instance_method(self):
-#         print(f"This is an instance method..")
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+
+#     def show(self):
+#         print(self.name)
+
+# s1 = Student("Rahul")
+# s1.show()
 
 # 2. Class Method :-This method works with the class itself it will not target the instance(object). we have to use @classmethod decorator for creating the class method and it takes cls as their first parameter.
+# --Or--> Class method class ke variables par kaam karta hai, object par nahi.
+    # ----> Iska first parameter "cls" hota hai, 
+#   ----> Use karne ke liye decorator lagate hai "@classmethod".
 # # Example:
-# class MyClass2:
+# class Student:
+#     school = "ABC School"
+
 #     @classmethod
-#     def class_method(cls):
-#         print(f"This is a class method")
+#     def show_school(cls):
+#         print(cls.school)
+
+# Student.show_school()
     
-# 3. Static Method :- This method doesn;t access class or instance directly it alos uses a decorator @staticmethod it just acts like a regular function placed inside a class.
+# 3. Static Method :- This method doesn't access class or instance directly it alos uses a decorator @staticmethod it just acts like a regular function placed inside a class.
+# ---- or ----> Static method na object ka data use karta hai, na class ka. Bas normal function hota hai jo class ke andar likha hota hai.
 # # Example:
-# class MyClass3:
+# class Math:
+
 #     @staticmethod
-#     def static_method():
-#         print(f"This ia a static method ")
+#     def add(a, b):
+#         return a + b
+
+# print(Math.add(5,3))
+
+
+# *******************************************************
+
+# ✅ Short yaad rakhne ka trick
+
+# self → object
+# cls → class
+# static → independent function
+# *******************************************************
 
 
 # Example of every statement
@@ -195,6 +224,9 @@ obj = Animal(12)
 obj.show() #Output: How are you, Your age is 12
 obj.hello() #Output: How are you brother
 obj.static()  #Output: How are you
+
+
+
 
 
 
