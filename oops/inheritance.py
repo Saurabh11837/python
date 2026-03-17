@@ -435,6 +435,34 @@
 #             print("Invalid Choise ")
 
 
+# # Example:
+# class Factory:
+#     def __init__(self,material, zips):
+#         self.material=material
+#         self.zips=zips
+    
+# class BhopalFactory(Factory):
+#     def __init__(self, material, zips,color):
+#         super().__init__(material, zips)
+#         self.color=color
+
+# class PuneFactory(BhopalFactory):
+#     def __init__(self, material, zips, color, pockets):
+#         super().__init__(material, zips, color)
+#         self.pockets=pockets
+    
+#     def show(self):
+#         print(f"Material : {self.material} \nZips : {self.zips} \nColor : {self.color}\nPockets : {self.pockets}")
+
+# obj = PuneFactory("Polister",4,"Yellow",5)
+# obj.show()       
+
+#OUTPUT:
+# Material : Polister
+# Zips : 4
+# Color : Yellow
+# Pockets : 5    
+
 
 # *********  4. Hierarchical Inheritace *********
 # --> Ek Parent class se multipal child classes inherit karti hain.
@@ -584,87 +612,87 @@
 # SpecialAccount → Adds features like cashback, inherits from Account
 # PremiumAccount → Combines SavingsAccount + SpecialAccount
 
-# Base class
-class Account:
-    def __init__(self, name, balance=0):
-        self.name = name
-        self.balance = balance
+# # Base class
+# class Account:
+#     def __init__(self, name, balance=0):
+#         self.name = name
+#         self.balance = balance
 
-    def deposit(self, amount):
-        self.balance += amount
-        print(f"{amount} deposited. New balance: {self.balance}")
+#     def deposit(self, amount):
+#         self.balance += amount
+#         print(f"{amount} deposited. New balance: {self.balance}")
 
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
-            print(f"{amount} withdrawn. Remaining balance: {self.balance}")
-        else:
-            print("Insufficient balance")
-
-
-# Parent 1
-class SavingsAccount(Account):
-    def add_interest(self, rate=5):
-        interest = self.balance * rate / 100
-        self.balance += interest
-        print(f"Interest added: {interest}. New balance: {self.balance}")
+#     def withdraw(self, amount):
+#         if amount <= self.balance:
+#             self.balance -= amount
+#             print(f"{amount} withdrawn. Remaining balance: {self.balance}")
+#         else:
+#             print("Insufficient balance")
 
 
-# Parent 2
-class SpecialAccount(Account):
-    def apply_cashback(self, cashback_amount):
-        self.balance += cashback_amount
-        print(f"Cashback {cashback_amount} applied. New balance: {self.balance}")
+# # Parent 1
+# class SavingsAccount(Account):
+#     def add_interest(self, rate=5):
+#         interest = self.balance * rate / 100
+#         self.balance += interest
+#         print(f"Interest added: {interest}. New balance: {self.balance}")
 
 
-# Child class → Hybrid inheritance
-class PremiumAccount(SavingsAccount, SpecialAccount):
-    def premium_benefit(self):
-        print(f"{self.name} enjoys premium benefits!")
+# # Parent 2
+# class SpecialAccount(Account):
+#     def apply_cashback(self, cashback_amount):
+#         self.balance += cashback_amount
+#         print(f"Cashback {cashback_amount} applied. New balance: {self.balance}")
 
 
-# ------------------- Interactive Banking Menu -------------------
-p = PremiumAccount("Aryan", 1000)
+# # Child class → Hybrid inheritance
+# class PremiumAccount(SavingsAccount, SpecialAccount):
+#     def premium_benefit(self):
+#         print(f"{self.name} enjoys premium benefits!")
 
-while True:
-    print("\n--- Premium Account Menu ---")
-    print("1. Deposit")
-    print("2. Withdraw")
-    print("3. Add Interest")
-    print("4. Apply Cashback")
-    print("5. Show Premium Benefits")
-    print("6. Show Balance")
-    print("0. Exit")
 
-    try:
-        choice = int(input("Enter your choice: "))
-    except ValueError:
-        print("Invalid input! Enter a number.")
-        continue
+# # ------------------- Interactive Banking Menu -------------------
+# p = PremiumAccount("Aryan", 1000)
 
-    match choice:
-        case 1:
-            amount = float(input("Enter amount to deposit: "))
-            p.deposit(amount)
-        case 2:
-            amount = float(input("Enter amount to withdraw: "))
-            p.withdraw(amount)
-        case 3:
-            rate = input("Enter interest rate (default 5%): ")
-            rate = float(rate) if rate else 5
-            p.add_interest(rate)
-        case 4:
-            cashback = float(input("Enter cashback amount: "))
-            p.apply_cashback(cashback)
-        case 5:
-            p.premium_benefit()
-        case 6:
-            print(f"Current balance: {p.balance}")
-        case 0:
-            print("Exiting... Thank you!")
-            break
-        case _:
-            print("Invalid choice! Please select a valid option.")
+# while True:
+#     print("\n--- Premium Account Menu ---")
+#     print("1. Deposit")
+#     print("2. Withdraw")
+#     print("3. Add Interest")
+#     print("4. Apply Cashback")
+#     print("5. Show Premium Benefits")
+#     print("6. Show Balance")
+#     print("0. Exit")
+
+#     try:
+#         choice = int(input("Enter your choice: "))
+#     except ValueError:
+#         print("Invalid input! Enter a number.")
+#         continue
+
+#     match choice:
+#         case 1:
+#             amount = float(input("Enter amount to deposit: "))
+#             p.deposit(amount)
+#         case 2:
+#             amount = float(input("Enter amount to withdraw: "))
+#             p.withdraw(amount)
+#         case 3:
+#             rate = input("Enter interest rate (default 5%): ")
+#             rate = float(rate) if rate else 5
+#             p.add_interest(rate)
+#         case 4:
+#             cashback = float(input("Enter cashback amount: "))
+#             p.apply_cashback(cashback)
+#         case 5:
+#             p.premium_benefit()
+#         case 6:
+#             print(f"Current balance: {p.balance}")
+#         case 0:
+#             print("Exiting... Thank you!")
+#             break
+#         case _:
+#             print("Invalid choice! Please select a valid option.")
 
 
 
